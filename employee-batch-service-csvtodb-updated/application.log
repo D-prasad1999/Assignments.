@@ -1,0 +1,24 @@
+2024-04-19 16:22:52,015 INFO  AbstractStep:273 - [] Step: [step1] executed in 520ms
+2024-04-19 16:22:52,105 INFO  SimpleJobLauncher$1:152 - [] Job: [FlowJob: [name=importEmployeeJob]] completed with the following parameters: [{time=1713523970892}] and the following status: [COMPLETED] in 684ms
+2024-04-19 16:22:52,229 WARN  JpaBaseConfiguration$JpaWebConfiguration:219 - [] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-19 16:22:53,291 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-19 16:22:53,322 INFO  StartupInfoLogger:61 - [] Started EmployeeBatchServiceCsvtodbApplication in 14.724 seconds (JVM running for 17.514)
+2024-04-19 16:22:53,329 INFO  JobLauncherApplicationRunner:154 - [] Running default command line with: []
+2024-04-19 16:22:53,504 INFO  SimpleJobLauncher$1:146 - [] Job: [FlowJob: [name=importEmployeeJob]] launched with the following parameters: [{run.id=1, time=1713523970892}]
+2024-04-19 16:22:53,567 INFO  SimpleStepHandler:149 - [] Executing step: [step1]
+2024-04-19 16:22:53,611 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 2
+2024-04-19 16:22:53,613 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 5
+2024-04-19 16:22:53,614 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 7
+2024-04-19 16:22:53,663 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 11
+2024-04-19 16:22:53,664 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 14
+2024-04-19 16:22:53,666 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 15
+2024-04-19 16:22:53,666 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 17
+2024-04-19 16:22:53,669 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 18
+2024-04-19 16:22:53,673 INFO  EmployeeProcessor:16 - [] Processing employee with ID: 20
+2024-04-19 16:22:53,747 INFO  AbstractStep:273 - [] Step: [step1] executed in 179ms
+2024-04-19 16:22:53,784 INFO  SimpleJobLauncher$1:152 - [] Job: [FlowJob: [name=importEmployeeJob]] completed with the following parameters: [{run.id=1, time=1713523970892}] and the following status: [COMPLETED] in 264ms
+2024-04-19 16:27:17,466 INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - [] Application shutdown requested.
+2024-04-19 16:27:18,022 INFO  DirectJDKLog:173 - [] Stopping service [Tomcat]
+2024-04-19 16:27:18,324 INFO  AbstractEntityManagerFactoryBean:651 - [] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-19 16:27:18,439 INFO  HikariDataSource:350 - [] HikariPool-1 - Shutdown initiated...
+2024-04-19 16:27:18,643 INFO  HikariDataSource:352 - [] HikariPool-1 - Shutdown completed.
