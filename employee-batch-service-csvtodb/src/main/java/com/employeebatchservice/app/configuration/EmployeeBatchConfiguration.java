@@ -5,6 +5,7 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.data.RepositoryItemWriter;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.LineMapper;
@@ -28,6 +29,7 @@ public class EmployeeBatchConfiguration {
 	private StepBuilderFactory stepBuilderFactory;
 	@Autowired
 	private EmployeeRepository employeeRepository;
+	
 
 	@Bean
 	public FlatFileItemReader<Employee> reader() {
@@ -82,12 +84,14 @@ public class EmployeeBatchConfiguration {
 						  .build();
 	}
 	
-	@Bean
-	public Job job() {
-		return jobBuilderFactory.get("import-employees")
-								.flow(step())
-								.end()
-								.build();
-	}
+	 @Bean
+	    public Job importEmployeeJob() {
+	        return jobBuilderFactory.get("importEmployeeJob")
+	                .incrementer(new RunIdIncrementer())
+	                .flow(step())
+	                .end()
+	                .build();
+	    }
+	
 }
 
